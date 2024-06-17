@@ -1,0 +1,39 @@
+From f8b03cbc28f899faa251259b8a22c7a560ca7c6b Mon Sep 17 00:00:00 2001
+From: SYED MOHAMMAD AQUIB <syedmohammadaquib12@gmail.com>
+Date: Mon, 17 Jun 2024 21:41:02 +0530
+Subject: [PATCH] RESOLVED
+
+---
+ src/DataManipulator.ts | 19 -------------------
+ 1 file changed, 19 deletions(-)
+
+diff --git a/src/DataManipulator.ts b/src/DataManipulator.ts
+index f82be47..737d8c2 100644
+--- a/src/DataManipulator.ts
++++ b/src/DataManipulator.ts
+@@ -31,22 +31,3 @@ export class DataManipulator {
+   
+   }
+ }
+-
+-export class DataStreamer {
+-  static API_URL: string = 'http://localhost:3000/query?id=1';
+-
+-  static getData(callback: (data: ServerRespond[]) => void): void {
+-    const request = new XMLHttpRequest();
+-    request.open('GET', DataStreamer.API_URL, false);
+-
+-    request.onload = () => {
+-      if (request.status === 200) {
+-        callback(JSON.parse(request.responseText));
+-      } else {
+-        alert('Request failed');
+-      }
+-    };
+-
+-    request.send();
+-  }
+-}
+-- 
+2.43.0.windows.1
+
